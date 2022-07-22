@@ -6,13 +6,12 @@ module Ticketmaster
   class Request
     include Configuration
 
-    attr_accessor :path, :params, :client, :method, :url
+    attr_accessor :path, :params, :client, :method
 
-    def initialize(path, params, client, url = nil)
+    def initialize(path, params, client)
       self.path   = path
       self.params = params
       self.client = client
-      self.url = url
     end
 
     def get
