@@ -1,6 +1,8 @@
 module Ticketmaster
   class Client
     require_relative 'clients/discovery'
+    require_relative 'clients/international_discovery'
+    
     include Ticketmaster::Client::Discovery
     include Ticketmaster::Client::InternationalDiscovery
 
