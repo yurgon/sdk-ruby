@@ -103,6 +103,24 @@ module Ticketmaster
         response = request.get
         Result.create(response, request, 'Ticketmaster::Country')
       end
+      
+      def int_get_regions(options={})
+        options[:version] ||= 'v2'
+        options[:params] ||= {}
+
+        request  = Request.new("mfxapi/#{options[:version]}/regions", options[:params], self)
+        response = request.get
+        Result.create(response, request, 'Ticketmaster::Region')
+      end
+      
+      def int_get_cities(options={})
+        options[:version] ||= 'v2'
+        options[:params] ||= {}
+
+        request  = Request.new("mfxapi/#{options[:version]}/cities", options[:params], self)
+        response = request.get
+        Result.create(response, request, 'Ticketmaster::City')
+      end
     end
   end
 end
