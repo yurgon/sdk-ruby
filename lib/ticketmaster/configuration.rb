@@ -39,7 +39,8 @@ module Ticketmaster
       :long,
       :country_ids,
       :country_id,
-      :region_id
+      :region_id,
+      :subcategories
     ]
   end
 end
