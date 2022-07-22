@@ -1,5 +1,5 @@
 module Ticketmaster
-  class Country < Result
+  class Domain < Result
     def id
       data['id']
     end
