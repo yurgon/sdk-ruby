@@ -31,10 +31,5 @@ module Ticketmaster
     def langs
       data['langs']
     end
-
-    def reload
-      data = request.client.get_venue(id).data
-      self
-    end
   end
 end
