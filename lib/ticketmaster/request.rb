@@ -30,7 +30,7 @@ module Ticketmaster
     end
     
     def url
-      client.url || 'https://app.ticketmaster.com'
+      client.int == true ? "https://app.ticketmaster.eu" : "https://app.ticketmaster.com"
     end
   end
 end
