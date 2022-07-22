@@ -71,8 +71,9 @@ module Ticketmaster
 
       def int_get_venue(id, options={})
         options[:version] ||= 'v2'
+        options[:params] ||= {}
 
-        request  = Request.new("mfxapi/#{options[:version]}/venues/#{id}", {}, self)
+        request  = Request.new("mfxapi/#{options[:version]}/venues/#{id}", options[:params], self)
         response = request.get
         Result.create(response, request, 'Ticketmaster::Venue')
       end
