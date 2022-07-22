@@ -27,7 +27,17 @@ module Ticketmaster
       :onsaleEndDateTime,
       :size,
       :page,
-      :apikey
+      :apikey,
+      :domain,
+      :lang,
+      :rows,
+      :start,
+      :sort_by,
+      :order,
+      :category_ids,
+      :lat,
+      :long,
+      :country_ids
     ]
   end
 end
