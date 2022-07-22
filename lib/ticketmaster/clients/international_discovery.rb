@@ -85,6 +85,24 @@ module Ticketmaster
         response = request.get
         Result.create(response, request, 'Ticketmaster::Event')
       end
+      
+      def int_get_domains(options={})
+        options[:version] ||= 'v2'
+        options[:params] ||= {}
+
+        request  = Request.new("mfxapi/#{options[:version]}/domains", options[:params], self)
+        response = request.get
+        Result.create(response, request, 'Ticketmaster::Domain')
+      end
+      
+      def int_get_categories(options={})
+        options[:version] ||= 'v2'
+        options[:params] ||= {}
+
+        request  = Request.new("mfxapi/#{options[:version]}/categories", options[:params], self)
+        response = request.get
+        Result.create(response, request, 'Ticketmaster::Category')
+      end
     end
   end
 end
