@@ -40,7 +40,8 @@ module Ticketmaster
       :country_ids,
       :country_id,
       :region_id,
-      :subcategories
+      :subcategories,
+      :has_events
     ]
   end
 end
