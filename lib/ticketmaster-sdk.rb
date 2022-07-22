@@ -7,6 +7,8 @@ require_relative 'ticketmaster/results/image'
 require_relative 'ticketmaster/results/venue'
 require_relative 'ticketmaster/results/classification'
 require_relative 'ticketmaster/results/attraction'
+require_relative 'ticketmaster/results/domain'
+require_relative 'ticketmaster/results/country'
 
 module Ticketmaster
   def self.client(options={})
