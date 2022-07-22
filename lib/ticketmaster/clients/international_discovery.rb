@@ -95,13 +95,13 @@ module Ticketmaster
         Result.create(response, request, 'Ticketmaster::Domain')
       end
       
-      def int_get_categories(options={})
+      def int_get_countries(options={})
         options[:version] ||= 'v2'
         options[:params] ||= {}
 
-        request  = Request.new("mfxapi/#{options[:version]}/categories", options[:params], self)
+        request  = Request.new("mfxapi/#{options[:version]}/countries", options[:params], self)
         response = request.get
-        Result.create(response, request, 'Ticketmaster::Category')
+        Result.create(response, request, 'Ticketmaster::Country')
       end
     end
   end
